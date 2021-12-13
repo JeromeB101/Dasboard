@@ -1,10 +1,8 @@
 version: "3"
 services:
-  Dashboard-uplink:
-    # if something fails or the server is restarted, the container will restart
-    restart: always 
-    container_name: Dashboard-uplink
-    image: Dashboard-uplink
-    build: 
-      # build the iris clasifier image from the Dockerfile in the current directory
-      context: . 
+  streamlit:
+    build: .
+    command: "streamlit run Dashboard.py"
+    ports:
+      - "8501:8501"
+
