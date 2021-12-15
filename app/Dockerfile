@@ -1,4 +1,5 @@
 FROM python:3.8
+EXPOSE 8501
 ADD requirements.txt /
 RUN pip install -r /requirements.txt
 ADD dashboard.py /
