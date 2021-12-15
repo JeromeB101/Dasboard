@@ -12,7 +12,7 @@ RUN apt-get update &&\
 EXPOSE 8501
 
 # making directory of app
-WORKDIR /streamlit-docker
+WORKDIR /streamlit-dashboard
 
 # copy over requirements
 COPY requirements.txt ./requirements.txt
