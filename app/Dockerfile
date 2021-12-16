@@ -1,12 +1,7 @@
 # base image
 # a little overkill but need it to install dot cli for dtreeviz
-FROM ubuntu:20.04
+FROM python 3.7
 
-# ubuntu installing - python, pip, graphviz, nano, libpq (for psycopg2)
-RUN apt-get update &&\
-    apt-get install python3.7 -y &&\
-    apt-get install python3-pip -y &&\
-    apt-get install graphviz -y
 
 # exposing default port for streamlit
 EXPOSE 8501
